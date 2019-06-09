@@ -1,0 +1,52 @@
+{
+  "name": "my-electron-react-boilerplate",
+  "version": "0.1.0",
+  "private": true,
+  "main": "public/Main.js",
+  "homepage": "./",
+  "dependencies": {
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-scripts": "3.0.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "electron-start": "electron .",
+    "preelectron-pack": "npm run build",
+    "electron-pack": "build -c.extraMetadata.main=build/Main.js"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "electron": "^5.0.3",
+    "electron-builder": "^20.43.0",
+    "node-sass": "^4.12.0",
+    "typescript": "^3.5.1"
+  },
+  "build": {
+    "appId": "nonExistentID",
+    "files": [
+    "build/**/*",
+    "node_modules/**/*"
+    ],
+    "directories":{
+      "buildResources": "assets"
+    }
+  }
+}
